@@ -1,83 +1,87 @@
 # complier 一个简单的语言
 
 **变量类型**
-``` c
+
+```c
 // 初始化 
-var a : int = 1 
+var a : int = 1
 
 int     1, 2, 3
 float   2.5, 0.6
 str     "字符串"
-bool    ture, false
-list    [1, 2, 3]
-dict    {"1":"a", "2":"b", "3":"c"}
+bool ture, false
+list[1, 2, 3]
+dict    {
+"1":"a", "2":"b", "3":"c"
+}
 ```
 
 ---
 **关键字**
-|   关键字  |  说明  |
-|:--------:|:-----:|
-| var      |变量定义|
-| int      |       |
-| float    |       |
-| str      | 字符串 |
-| bool     |布尔类型|
-| list     |  数组  |
-| dict     |  字典  |
-| ture     |       |
-| false    |       |
-| if       |       |
-| else     |       |
-| elif     |再次判断|
-| for      |       |
-| continue |       |
-| break    |       |
-| fun      |方法定义|
-| return   |       |
-| pack     |数据集合|
-| import   |  引入  |
-|          |       |
+
+|   关键字    |  说明  |
+|:--------:|:----:|
+|   var    | 变量定义 |
+|   int    |      |
+|  float   |      |
+|   str    | 字符串  |
+|   bool   | 布尔类型 |
+|   list   |  数组  |
+|   dict   |  字典  |
+|   ture   |      |
+|  false   |      |
+|    if    |      |
+|   else   |      |
+|   elif   | 再次判断 |
+|   for    |      |
+| continue |      |
+|  break   |      |
+|   fun    | 方法定义 |
+|  return  |      |
+|   pack   | 数据集合 |
+|  import  |  引入  |
 
 ---
 **运算符**
-|  运算符 |   描述   |
-|:------:|:-------:|
-|   []   | 数组下标 |
-|   ()   |         |
-|    .   | 成员选择 |
-|    -   | 算数负号 |
-|    *   | 地址取值 |
-|    !   |  逻辑非  |
-|    ~   | 按位取反 |
-|    /   |         |
-|    *   |         |
-|    %   |         |
-|    +   |         |
-|    -   |         |
-|   <<   |         |
-|   >>   |         |
-|    >   |         |
-|   >=   |         |
-|    <   |         |
-|   <=   |         |
-|   ==   |         |
-|   !=   |         |
-|    &   |  按位与  |
-|    ^   | 按位异或 |
-|   \|   |  按位或  |
-|   &&   |  逻辑与  |
-|  \|\|  |  逻辑或  |
-|    =   |         |
-|   /=   |         |
-|   *=   |         |
-|   +=   |         |
-|   -=   |         |
-|    ,   |         |
-|        |         |
+
+|     运算符      |  描述  |
+|:------------:|:----:|
+|      []      | 数组下标 |
+|      ()      |      |
+|      .       | 成员选择 |
+|      -       | 算数负号 |
+|      *       | 地址取值 |
+|      !       | 逻辑非  |
+|      ~       | 按位取反 |
+|      /       |      |
+|      *       |      |
+|      %       |      |
+|      +       |      |
+|      -       |      |
+|      <<      |      |
+|     \>>      |      |
+|      \>      |      |
+|     \>=      |      |
+|      <       |      |
+|      <=      |      |
+|      ==      |      |
+|      !=      |      |
+|      &       | 按位与  |
+|      ^       | 按位异或 |
+|    &#124;    | 按位或  |
+|      &&      | 逻辑与  |
+| &#124;&#124; | 逻辑或  |
+|      =       |      |
+|      /=      |      |
+|      *=      |      |
+|      +=      |      |
+|      -=      |      |
+|      ,       |      |
 
 ---
 **条件语句**
-``` c
+
+```c
 if (a < b) { 语句 }
 if (a < b) { 语句 } else { 语句 }
 if (a == b) { 语句 } elif(a == c) { 语句 } else { 语句 }
@@ -94,7 +98,8 @@ print(resutl) // a==b
 
 ---
 **循环语句**
-``` c
+
+```c
 for (变量: 可迭代量) 单条语句
 for (变量: 可迭代量) { 语句 }
 
@@ -118,7 +123,8 @@ for (key, value: dicts) {
 
 ---
 **枚举**
-``` c
+
+```c
 enum Fruit {
     Apple,
     Banana,
@@ -128,37 +134,39 @@ enum Fruit {
 
 ---
 **函数（方法）**
-``` c
+
+```c
 // 定义
 fun do_something(in: int) : Fruit {
-    if (in == 1) 
-        return Fruit.Apple
-    elif (in == 2)
-        return Fruit.Banana
-    else
-        return Fruit.Cherry
+if (in == 1)
+return Fruit.Apple
+elif (in == 2)
+return Fruit.Banana
+else
+return Fruit.Cherry
 }
 
 // 主函数 (程序入口)
 fun main（） {
-    var result: Fruit = do_something(3)
-    print(result) // Cherry
+var result: Fruit = do_something(3)
+print(result) // Cherry
 }
 ```
 
 ---
 **数据集合（数据与函数的集合而已）**
-``` c
+
+```c
 // 定义：
 pack Student {
-    var name: str
-    var age: int
-    var class: str
-    var score: float = 0
-    
-    fun prints() {
-        print(name, age, class, score)
-    }
+var name: str
+var age: int
+var class: str
+var score: float = 0
+
+fun prints() {
+print(name, age, class, score)
+}
 }
 
 // 初始化：
