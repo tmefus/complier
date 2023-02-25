@@ -11,8 +11,8 @@ float   2.5, 0.6
 str     "字符串"
 bool ture, false
 list[1, 2, 3]
-dict    {
-"1":"a", "2":"b", "3":"c"
+dict {
+  "1":"a", "2":"b", "3":"c"
 }
 ```
 
@@ -105,19 +105,19 @@ for (变量: 可迭代量) { 语句 }
 
 // 次数循环
 for (i: 2..10) { 
-    print(i) // 2, 3,..., 9, 10
+  print(i) // 2, 3,..., 9, 10
 }
 
 // 数组循环
 var lists = ["a", "b", "c"]
 for (i: lists) { 
-    print(i) // a, b, c
+  print(i) // a, b, c
 }
 
 // 字典循环
 var dicts = {"a":123, "b":456, "c":789}
 for (key, value: dicts) { 
-    print(key, ":",value) // a:123, b:456, c:789
+  print(key, ":",value) // a:123, b:456, c:789
 }
 ```
 
@@ -126,9 +126,9 @@ for (key, value: dicts) {
 
 ```c
 enum Fruit {
-    Apple,
-    Banana,
-    Cherry
+  Apple,
+  Banana,
+  Cherry
 }
 ```
 
@@ -138,18 +138,18 @@ enum Fruit {
 ```c
 // 定义
 fun do_something(in: int) : Fruit {
-if (in == 1)
-return Fruit.Apple
-elif (in == 2)
-return Fruit.Banana
-else
-return Fruit.Cherry
+  if (in == 1)
+    return Fruit.Apple
+  elif (in == 2)
+    return Fruit.Banana
+  else
+    return Fruit.Cherry
 }
 
 // 主函数 (程序入口)
 fun main（） {
-var result: Fruit = do_something(3)
-print(result) // Cherry
+  var result: Fruit = do_something(3)
+  print(result) // Cherry
 }
 ```
 
@@ -159,14 +159,14 @@ print(result) // Cherry
 ```c
 // 定义：
 pack Student {
-var name: str
-var age: int
-var class: str
-var score: float = 0
-
-fun prints() {
-print(name, age, class, score)
-}
+  var name: str
+  var age: int
+  var class: str
+  var score: float = 0
+  
+  fun prints() {
+    print(name, age, class, score)
+  }
 }
 
 // 初始化：
